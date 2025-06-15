@@ -409,24 +409,196 @@
 //    }
 //}
 
-// Enum
-using System;
+//// Enum1
+//using System;
 
-namespace Enum
+//namespace Enum1
+//{
+//    class MainApp
+//    {
+//        // main 메서드 밖 전역함수로 사용
+//        // 배열과 같이 순차적으로 0, 1, 2, 3, 4를 자동 할당
+//        enum DialogResult {YES, NO, CANCEL, CONFIRM, OK}
+
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine((int)DialogResult.NO);
+//            Console.WriteLine((int)DialogResult.YES);
+//            Console.WriteLine((int)DialogResult.CANCEL);
+//            Console.WriteLine((int)DialogResult.CONFIRM);
+//            Console.WriteLine((int)DialogResult.OK);
+//        }
+//    }
+//}
+
+//// Enum2
+//using System;
+
+//namespace Enum2
+//{
+//    enum DialogResult { YES, NO, CANCEL, CONFIRM, OK }
+
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            DialogResult result = DialogResult.YES;
+
+//            Console.WriteLine(result == DialogResult.YES);
+//            Console.WriteLine(result == DialogResult.NO);
+//            Console.WriteLine(result == DialogResult.CANCEL);
+//            Console.WriteLine(result == DialogResult.CONFIRM);
+//            Console.WriteLine(result == DialogResult.OK);
+//        }
+//    }
+//}
+
+//// Enum3
+//using System;
+
+//namespace Enum3
+//{
+//    class MainApp
+//    {
+//        enum DialogResult {YES = 10, NO, CANCEL, CONFIRM = 50, OK}
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine((int)DialogResult.NO);
+//            Console.WriteLine((int)DialogResult.YES);
+//            Console.WriteLine((int)DialogResult.CANCEL);
+//            Console.WriteLine((int)DialogResult.CONFIRM);
+//            Console.WriteLine((int)DialogResult.OK);
+//        }
+//    }
+//}
+
+//// Nullable 형식
+//using System;
+
+//namespace Nullable
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            int? a = null;
+
+//            // HashValue 메서드 해당값이 null이면 False, null이 아니면 True
+//            Console.WriteLine(a.HasValue);
+//            // a는 null이므로 False 출력
+//            Console.WriteLine(a != null);
+
+//            a = 3;
+
+//            Console.WriteLine(a.HasValue);
+//            // a는 null이 아니므로 True 출력
+//            Console.WriteLine(a != null);
+//            // Value 메서드 변수에 담겨있는 해당값 출력
+//            Console.WriteLine(a.Value);
+//        }
+//    }
+//}
+
+//// Var
+//using System;
+
+//namespace UsingVar
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            // var 선언시 반드시 초기화 필요
+//            var a = 20;
+//            Console.WriteLine("Type: {0}, Value: {1}", a.GetType(), a);
+
+//            var b = 3.1414213;
+//            Console.WriteLine("Type: {0}, Value: {1}", b.GetType(), b);
+
+//            var c = "Hello, World!";
+//            Console.WriteLine("Type: {0}, Value: {1}", c.GetType(), c);
+
+//            var d = new int[] {10, 20, 30};
+//            Console.Write("Type: {0}, Value: ", b.GetType());
+//            foreach (var e in d)
+//                Console.Write("{0} ", e);
+//            Console.WriteLine();
+//        }
+//    }
+//}
+
+//// CTS
+//using System;
+
+//namespace CTS
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            System.Int32 a = 123;
+//            int b = 456;
+
+//            Console.WriteLine("a type: {0}, value: {1}", a.GetType().ToString(), a);
+//            Console.WriteLine("b type: {0}, value: {1}", b.GetType().ToString(), b);
+
+//            System.String c = "abc";
+//            string d = "def";
+
+//            Console.WriteLine("c type: {0}, value: {1}", c.GetType().ToString(), c);
+//            Console.WriteLine("d type: {0}, value: {1}", d.GetType().ToString(), d);
+//        }
+//    }
+//}
+
+// StringSearch
+using static System.Console;
+
+namespace StringSearch
 {
     class MainApp
     {
-        // main 메서드 밖 전역함수로 사용
-        // 배열과 같이 순차적으로 0, 1, 2, 3, 4를 자동 할당
-        enum DialogResult {YES, NO, CANCEL, CONFIRM, OK}
-
         static void Main(string[] args)
         {
-            Console.WriteLine((int)DialogResult.YES);
-            Console.WriteLine((int)DialogResult.NO);
-            Console.WriteLine((int)DialogResult.CANCEL);
-            Console.WriteLine((int)DialogResult.CONFIRM);
-            Console.WriteLine((int)DialogResult.OK);
+            string greeting = "Good Morning";
+
+            WriteLine(greeting);
+            WriteLine();
+
+            // IndexOf()
+            // 현재 문자열 내에서 찾으려고 하는 지정된 문자 또는 문자열의 위치를 찾는다
+            WriteLine("IndexOf 'Good': {0}", greeting.IndexOf("Good")); // 0번째 인덱스
+            WriteLine("IndexOf 'o': {0}", greeting.IndexOf('o'));   // 1번째 인덱스
+
+            // LastIndexOf()
+            // 현재 문자열 내에서 찾으려고 하는 지정된 문자 또는 문자열의 위치를 뒤에서부터 찾는다
+            WriteLine("LastIndexOf 'good': {0}", greeting.LastIndexOf("Good")); // 0번째 인덱스
+            WriteLine("LastIndexOf 'o': {0}", greeting.LastIndexOf('o'));   // 1번쨰 인덱스
+
+            // StartsWith()
+            // 현재 문자열이 지정된 문자열로 시작하는지를 평가
+            // 논리형으로 반환
+            WriteLine("StartsWith 'Good': {0}", greeting.StartsWith("Good"));   // True
+            WriteLine("StartsWith 'Morning': {0}", greeting.StartsWith("Morning")); // False
+
+            // EndsWith()
+            // 현재 문자열이 지정된 문자열로 끝나는지 평가
+            // 논리형으로 반환
+            WriteLine("EndsWith 'Good': {0}", greeting.EndsWith("Good"));   // False
+            WriteLine("EndsWith 'Morning': {0}", greeting.EndsWith("Morning")); // True
+
+            // Contains()
+            // 현재 문자열이 지정된 문자열을 포함하는지를 평가
+            // 논리형으로 반환
+            WriteLine("Contains 'Evening': {0}", greeting.Contains("Evening")); // false
+            WriteLine("Contains 'Morning': {0}", greeting.Contains("Morning")); // ture
+
+            // Replace()
+            // 현재 문자열에서 지정된 문자열이 다른 지정된 문자열로 모두 바뀐 새 문자열을 반환
+            // Replace(A, B) -> A를 B로 바뀐 새문자열 반환
+            WriteLine("Replaced 'Morning' with 'Evening': {0}",
+                greeting.Replace("Morning", "Evening"));
         }
     }
 }
+
