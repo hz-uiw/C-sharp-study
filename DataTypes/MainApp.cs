@@ -551,54 +551,92 @@
 //    }
 //}
 
-// StringSearch
+//// StringSearch
+//using static System.Console;
+
+//namespace StringSearch
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            string greeting = "Good Morning";
+
+//            WriteLine(greeting);
+//            WriteLine();
+
+//            // IndexOf()
+//            // 현재 문자열 내에서 찾으려고 하는 지정된 문자 또는 문자열의 위치를 찾는다
+//            WriteLine("IndexOf 'Good': {0}", greeting.IndexOf("Good")); // 0번째 인덱스
+//            WriteLine("IndexOf 'o': {0}", greeting.IndexOf('o'));   // 1번째 인덱스
+
+//            // LastIndexOf()
+//            // 현재 문자열 내에서 찾으려고 하는 지정된 문자 또는 문자열의 위치를 뒤에서부터 찾는다
+//            WriteLine("LastIndexOf 'good': {0}", greeting.LastIndexOf("Good")); // 0번째 인덱스
+//            WriteLine("LastIndexOf 'o': {0}", greeting.LastIndexOf('o'));   // 1번쨰 인덱스
+
+//            // StartsWith()
+//            // 현재 문자열이 지정된 문자열로 시작하는지를 평가
+//            // 논리형으로 반환
+//            WriteLine("StartsWith 'Good': {0}", greeting.StartsWith("Good"));   // True
+//            WriteLine("StartsWith 'Morning': {0}", greeting.StartsWith("Morning")); // False
+
+//            // EndsWith()
+//            // 현재 문자열이 지정된 문자열로 끝나는지 평가
+//            // 논리형으로 반환
+//            WriteLine("EndsWith 'Good': {0}", greeting.EndsWith("Good"));   // False
+//            WriteLine("EndsWith 'Morning': {0}", greeting.EndsWith("Morning")); // True
+
+//            // Contains()
+//            // 현재 문자열이 지정된 문자열을 포함하는지를 평가
+//            // 논리형으로 반환
+//            WriteLine("Contains 'Evening': {0}", greeting.Contains("Evening")); // false
+//            WriteLine("Contains 'Morning': {0}", greeting.Contains("Morning")); // ture
+
+//            // Replace(A, B)
+//            // 현재 문자열에서 지정된 문자열이 다른 지정된 문자열로 모두 바뀐 새 문자열을 반환
+//            WriteLine("Replaced 'Morning' with 'Evening': {0}",
+//                greeting.Replace("Morning", "Evening"));
+//        }
+//    }
+//}
+
+// StringModify
 using static System.Console;
 
-namespace StringSearch
+namespace StringModify
 {
     class MainApp
     {
         static void Main(string[] args)
         {
-            string greeting = "Good Morning";
+            // ToLower()
+            // 현재 문자열의 모든 대문자를 소문자로 바꾼 새 문자열 반환
+            WriteLine("ToLower(): '{0}'", "ABC".ToLower());
 
-            WriteLine(greeting);
-            WriteLine();
+            // ToUpper()
+            // 현재 문자열의 모든 소문자를 대문자로 바꾼 새 문자열 반환
+            WriteLine("ToUpper(): '{0}'", "abc".ToLower());
 
-            // IndexOf()
-            // 현재 문자열 내에서 찾으려고 하는 지정된 문자 또는 문자열의 위치를 찾는다
-            WriteLine("IndexOf 'Good': {0}", greeting.IndexOf("Good")); // 0번째 인덱스
-            WriteLine("IndexOf 'o': {0}", greeting.IndexOf('o'));   // 1번째 인덱스
+            // Insert(Index, a)
+            // 현재 문자열의 지정된 위치에 지정된 문자열이 삽입된 새 문자열 반환
+            WriteLine("Insert(): '{0}'", "Happy Friday!".Insert(5, " Sunny "));
 
-            // LastIndexOf()
-            // 현재 문자열 내에서 찾으려고 하는 지정된 문자 또는 문자열의 위치를 뒤에서부터 찾는다
-            WriteLine("LastIndexOf 'good': {0}", greeting.LastIndexOf("Good")); // 0번째 인덱스
-            WriteLine("LastIndexOf 'o': {0}", greeting.LastIndexOf('o'));   // 1번쨰 인덱스
+            // Remove(a, b)
+            // 현재 문자열의 지정된 위치로부터 지정된 수만큼 문자가 삭제된 새 문자열 반환
+            WriteLine("Remove(): '{0}'", "I Don't Love You.".Remove(2, 6));
 
-            // StartsWith()
-            // 현재 문자열이 지정된 문자열로 시작하는지를 평가
-            // 논리형으로 반환
-            WriteLine("StartsWith 'Good': {0}", greeting.StartsWith("Good"));   // True
-            WriteLine("StartsWith 'Morning': {0}", greeting.StartsWith("Morning")); // False
+            // Trim()
+            // 현재 문자열의 압/뒤에 있는  공백을 삭제한 새 문자열 반환
+            WriteLine("Trim(): '{0}'", " No Spaces ".Trim());
 
-            // EndsWith()
-            // 현재 문자열이 지정된 문자열로 끝나는지 평가
-            // 논리형으로 반환
-            WriteLine("EndsWith 'Good': {0}", greeting.EndsWith("Good"));   // False
-            WriteLine("EndsWith 'Morning': {0}", greeting.EndsWith("Morning")); // True
+            // TrimStar()
+            // 현재 문자열의 앞에 있는 공백을 삭제한 새 문자열 반환
+            WriteLine("TrimStart(): '{0}", " No Spaces ".TrimStart());
 
-            // Contains()
-            // 현재 문자열이 지정된 문자열을 포함하는지를 평가
-            // 논리형으로 반환
-            WriteLine("Contains 'Evening': {0}", greeting.Contains("Evening")); // false
-            WriteLine("Contains 'Morning': {0}", greeting.Contains("Morning")); // ture
-
-            // Replace()
-            // 현재 문자열에서 지정된 문자열이 다른 지정된 문자열로 모두 바뀐 새 문자열을 반환
-            // Replace(A, B) -> A를 B로 바뀐 새문자열 반환
-            WriteLine("Replaced 'Morning' with 'Evening': {0}",
-                greeting.Replace("Morning", "Evening"));
+            // TrimEnd()
+            // 현재 문자열의 뒤에 있는 공백을 삭제한 새 문자열 반환
+            WriteLine("TrimEnd(): '{0}'", " No Spaces ".TrimEnd());
         }
     }
 }
-
