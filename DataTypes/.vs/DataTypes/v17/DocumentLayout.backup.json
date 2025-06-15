@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\my\\Desktop\\C#\\DataTypes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A771ED0-745F-47ED-9246-4C99991DC5CE}|DataTypes.csproj|c:\\users\\my\\desktop\\c#\\datatypes\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A771ED0-745F-47ED-9246-4C99991DC5CE}|DataTypes.csproj|solutionrelative:mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainApp.cs",
+              "DocumentMoniker": "C:\\Users\\my\\Desktop\\C#\\DataTypes\\MainApp.cs",
+              "RelativeDocumentMoniker": "MainApp.cs",
+              "ToolTip": "C:\\Users\\my\\Desktop\\C#\\DataTypes\\MainApp.cs*",
+              "RelativeToolTip": "MainApp.cs*",
+              "ViewState": "AgIAAJIBAAAAAAAAAAAQwKoBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T05:04:48.254Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

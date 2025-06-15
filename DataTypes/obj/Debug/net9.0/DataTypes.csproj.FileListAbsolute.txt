@@ -1,0 +1,15 @@
+C:\Users\my\Desktop\C#\DataTypes\bin\Debug\net9.0\DataTypes.exe
+C:\Users\my\Desktop\C#\DataTypes\bin\Debug\net9.0\DataTypes.deps.json
+C:\Users\my\Desktop\C#\DataTypes\bin\Debug\net9.0\DataTypes.runtimeconfig.json
+C:\Users\my\Desktop\C#\DataTypes\bin\Debug\net9.0\DataTypes.dll
+C:\Users\my\Desktop\C#\DataTypes\bin\Debug\net9.0\DataTypes.pdb
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.AssemblyInfoInputs.cache
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.AssemblyInfo.cs
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.csproj.CoreCompileInputs.cache
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.sourcelink.json
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.dll
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\refint\DataTypes.dll
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.pdb
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\DataTypes.genruntimeconfig.cache
+C:\Users\my\Desktop\C#\DataTypes\obj\Debug\net9.0\ref\DataTypes.dll
