@@ -601,42 +601,125 @@
 //    }
 //}
 
-// StringModify
+//// StringModify
+//using static System.Console;
+
+//namespace StringModify
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            // ToLower()
+//            // 현재 문자열의 모든 대문자를 소문자로 바꾼 새 문자열 반환
+//            WriteLine("ToLower(): '{0}'", "ABC".ToLower());
+
+//            // ToUpper()
+//            // 현재 문자열의 모든 소문자를 대문자로 바꾼 새 문자열 반환
+//            WriteLine("ToUpper(): '{0}'", "abc".ToLower());
+
+//            // Insert(num, a)
+//            // 현재 문자열의 지정된 위치에 지정된 문자열이 삽입된 새 문자열 반환
+//            WriteLine("Insert(): '{0}'", "Happy Friday!".Insert(5, " Sunny "));
+
+//            // Remove(a, b)
+//            // 현재 문자열의 지정된 위치로부터 지정된 수만큼 문자가 삭제된 새 문자열 반환
+//            WriteLine("Remove(): '{0}'", "I Don't Love You.".Remove(2, 6));
+
+//            // Trim()
+//            // 현재 문자열의 압/뒤에 있는  공백을 삭제한 새 문자열 반환
+//            WriteLine("Trim(): '{0}'", " No Spaces ".Trim());
+
+//            // TrimStar()
+//            // 현재 문자열의 앞에 있는 공백을 삭제한 새 문자열 반환
+//            WriteLine("TrimStart(): '{0}", " No Spaces ".TrimStart());
+
+//            // TrimEnd()
+//            // 현재 문자열의 뒤에 있는 공백을 삭제한 새 문자열 반환
+//            WriteLine("TrimEnd(): '{0}'", " No Spaces ".TrimEnd());
+//        }
+//    }
+//}
+
+//// StringSlice
+//using System;
+//using static System.Console;
+
+//namespace StringSlice
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            string greeting = "Good Morning";
+
+//            // SubString(Index, num2)
+//            // 현재 문자열의 지정된 위치(Index)로부터 지정된 수(num2) 만큼의 문자로 이루어진 새 문자열 반환
+//            // num2를 비워두면 해당 Index부터 문자열 끝까지 새 문자열로 반환
+//            WriteLine(greeting.Substring(0, 4));    // "Good"
+//            WriteLine(greeting.Substring(5));   // "Morning"
+//            WriteLine();
+
+//            // Split()
+//            // 지정된 문자 기준으로 현재 문자열을 분리한 다음 분리한 문자열의 배열을 반환
+//            string[] arr = greeting.Split(
+//                new string[] { " " }, StringSplitOptions.None);
+//            WriteLine("Word Count: {0}", arr.Length);
+
+//            foreach (string element in arr)
+//                WriteLine("{0}", element);
+//        }
+//    }
+//}
+
+//// StringFormatBasic
+//using System;
+//using static System.Console;
+
+//namespace StringFormatBasic
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            string fmt = "{0,-20}{1, -15}{2, 30}";
+
+//            WriteLine(fmt, "Publisher", "Author", "Title");
+//            WriteLine(fmt, "Marvel", "Stan Lee", "Iron Man");
+//            WriteLine(fmt, "Hanbit", "Minchang Kwon", "This is c#");
+//            WriteLine(fmt, "Prentice Hall", "K&R", "The C Programming Language");
+//        }
+//    }
+//}
+
+// StringFormatNumber
+using System;
 using static System.Console;
 
-namespace StringModify
+namespace StringFormatNumber
 {
     class MainApp
     {
         static void Main(string[] args)
         {
-            // ToLower()
-            // 현재 문자열의 모든 대문자를 소문자로 바꾼 새 문자열 반환
-            WriteLine("ToLower(): '{0}'", "ABC".ToLower());
+            // D, 10진수: 입력된 수를 10진수로 서식화
+            WriteLine("10진수: {0:D}", 123);  // WriteLine(string.Format("10진수: {0:D}, 123)); 과 동일
+            WriteLine("10진수: {0:D5}", 123);
+            
+            // X, 16진수: 입력된수를 16진수로 서식화
+            WriteLine("16진수: 0x{0:X}", 0xFF1234);
+            WriteLine("16진수: 0x{0:X8}", 0xFF1234);
 
-            // ToUpper()
-            // 현재 문자열의 모든 소문자를 대문자로 바꾼 새 문자열 반환
-            WriteLine("ToUpper(): '{0}'", "abc".ToLower());
+            // N, 콤마(,)로 묶어 표현한 수: 입력된 수를 콤마로 구분하여 출력
+            WriteLine("숫자: {0:N}", 123456789);
+            WriteLine("숫자: {0:N0}", 123456789); // 자릿수 0은 소수점 이하를 제거함
 
-            // Insert(Index, a)
-            // 현재 문자열의 지정된 위치에 지정된 문자열이 삽입된 새 문자열 반환
-            WriteLine("Insert(): '{0}'", "Happy Friday!".Insert(5, " Sunny "));
+            // F, 고정 소수점: 입력된 수를 고정 소수점 형식으로 서식화
+            WriteLine("고정 소수점: {0:F}", 123.45);
+            WriteLine("고정 소수점: {0:F5}", 123.456);
 
-            // Remove(a, b)
-            // 현재 문자열의 지정된 위치로부터 지정된 수만큼 문자가 삭제된 새 문자열 반환
-            WriteLine("Remove(): '{0}'", "I Don't Love You.".Remove(2, 6));
-
-            // Trim()
-            // 현재 문자열의 압/뒤에 있는  공백을 삭제한 새 문자열 반환
-            WriteLine("Trim(): '{0}'", " No Spaces ".Trim());
-
-            // TrimStar()
-            // 현재 문자열의 앞에 있는 공백을 삭제한 새 문자열 반환
-            WriteLine("TrimStart(): '{0}", " No Spaces ".TrimStart());
-
-            // TrimEnd()
-            // 현재 문자열의 뒤에 있는 공백을 삭제한 새 문자열 반환
-            WriteLine("TrimEnd(): '{0}'", " No Spaces ".TrimEnd());
+            // E, 지수: 입력된 수를 지수 표기로 서식화(공학용)
+            WriteLine("공학: {0:E}", 123.456789);
         }
     }
 }
