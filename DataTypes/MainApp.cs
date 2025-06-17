@@ -692,34 +692,84 @@
 //    }
 //}
 
-// StringFormatNumber
-using System;
-using static System.Console;
+//// StringFormatNumber
+//using System;
+//using static System.Console;
 
-namespace StringFormatNumber
+//namespace StringFormatNumber
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            // D, 10진수: 입력된 수를 10진수로 서식화
+//            WriteLine("10진수: {0:D}", 123);  // WriteLine(string.Format("10진수: {0:D}, 123)); 과 동일
+//            WriteLine("10진수: {0:D5}", 123);
+
+//            // X, 16진수: 입력된수를 16진수로 서식화
+//            WriteLine("16진수: 0x{0:X}", 0xFF1234);
+//            WriteLine("16진수: 0x{0:X8}", 0xFF1234);
+
+//            // N, 콤마(,)로 묶어 표현한 수: 입력된 수를 콤마로 구분하여 출력
+//            WriteLine("숫자: {0:N}", 123456789);
+//            WriteLine("숫자: {0:N0}", 123456789); // 자릿수 0은 소수점 이하를 제거함
+
+//            // F, 고정 소수점: 입력된 수를 고정 소수점 형식으로 서식화
+//            WriteLine("고정 소수점: {0:F}", 123.45);
+//            WriteLine("고정 소수점: {0:F5}", 123.456);
+
+//            // E, 지수: 입력된 수를 지수 표기로 서식화(공학용)
+//            WriteLine("공학: {0:E}", 123.456789);
+//        }
+//    }
+//}
+
+//// StringFormatDateTime
+//using System;
+//using System.Globalization;
+//using static System.Console;
+
+//namespace StringFormatDateTime
+//{
+//    class MainApp
+//    {
+//        static void Main(string[] args)
+//        {
+//            DateTime dt = new DateTime(2025, 06, 17, 21, 59, 43);
+
+//            WriteLine("12시간 형식: {0:yyyy-MM-dd tt hh:mmss (ddd)}", dt);
+//            WriteLine("24시간 형식: {0:yyyy-MM-dd HH:MM:ss (dddd)}", dt);
+//            WriteLine();
+
+//            CultureInfo ciKo = new CultureInfo("ko-KR");
+//            WriteLine(dt.ToString("yyyy-MM-dd tt hh:mm:ss (ddd)"), ciKo);
+//            WriteLine(dt.ToString("yyyy-MM-dd HH:mm:ss (dddd)"), ciKo);
+//            WriteLine(dt.ToString(ciKo));
+//            WriteLine();
+
+//            CultureInfo ciEn = new CultureInfo("en-US");
+//            WriteLine(dt.ToString("yyyy-MM-dd tt hh:mm:ss (ddd)"), ciEn);
+//            WriteLine(dt.ToString("yyyy-MM-dd HH:mm:ss (dddd)"), ciEn);
+//            WriteLine(dt.ToString(ciEn));
+//        }
+//    }
+//}
+
+using System;
+
+namespace test1
 {
     class MainApp
     {
         static void Main(string[] args)
         {
-            // D, 10진수: 입력된 수를 10진수로 서식화
-            WriteLine("10진수: {0:D}", 123);  // WriteLine(string.Format("10진수: {0:D}, 123)); 과 동일
-            WriteLine("10진수: {0:D5}", 123);
-            
-            // X, 16진수: 입력된수를 16진수로 서식화
-            WriteLine("16진수: 0x{0:X}", 0xFF1234);
-            WriteLine("16진수: 0x{0:X8}", 0xFF1234);
+            Console.Write("사각형 가로 길이 입력 >>> ");
+            string width = Console.ReadLine();
 
-            // N, 콤마(,)로 묶어 표현한 수: 입력된 수를 콤마로 구분하여 출력
-            WriteLine("숫자: {0:N}", 123456789);
-            WriteLine("숫자: {0:N0}", 123456789); // 자릿수 0은 소수점 이하를 제거함
+            Console.Write("사각형 세로 길이 입력 >>> ");
+            string height = Console.ReadLine();
 
-            // F, 고정 소수점: 입력된 수를 고정 소수점 형식으로 서식화
-            WriteLine("고정 소수점: {0:F}", 123.45);
-            WriteLine("고정 소수점: {0:F5}", 123.456);
-
-            // E, 지수: 입력된 수를 지수 표기로 서식화(공학용)
-            WriteLine("공학: {0:E}", 123.456789);
+            Console.WriteLine($"사각형 넓이 >>> {Convert.ToInt32(width) * Convert.ToInt32(height)}");
         }
     }
 }
